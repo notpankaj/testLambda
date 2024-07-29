@@ -1,0 +1,25 @@
+.contact-box {
+ #contact-form-wrapper{
+    position: relative;
+
+
+    #contact-form {
+        opacity: 0;
+        transform: scaleY(0.5);
+        height: 400px;
+        width: 600px;
+        background-color: #f1f1f1f1;
+        position: absolute;
+        top: 0;
+        overflow-y: scroll;
+    }
+    #contact-form.show {
+        z-index: 10;
+        opacity: 1;
+        transform: scaleY(1);
+        transition: transform 10000ms ease-in linear ;
+    }
+  
+ }
+
+}

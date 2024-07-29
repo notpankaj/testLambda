@@ -1,0 +1,19 @@
+.nav__item_box {
+    transition: all 0.5s linear;
+}
+.nav__flying {
+    position: fixed;
+    top: 20px;
+    right: 0%;
+    transform: translateX(-100%);
+    background: transparent;
+    padding: 5px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.nav__flying> div {
+    background-color: #fff;
+}
+.nav__flying a {
+    color: black;
+}

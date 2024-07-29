@@ -1,0 +1,241 @@
+Rizz Policy Marketing Website - Contract Work
+1. Project Scope (Contract Work)
+Landing Page (http://rizzpolicy.com/home)
+Purpose: Attract and convert prospects
+See Details for all the requirements and design on Figma:
+Wireframe Link
+Prototype Link
+General Requirements:
+Website is accessible and responsive across desktop and mobile devices
+Homepage clearly communicates the value proposition and types of insurance offered
+Navigation menu is intuitive and user-friendly
+Clear call-to-action for getting insurance quotes or starting the policy review process
+In-Scope Pages and Features
+Product Pages
+http://rizzpolicy.com/shop
+Purpose: Introduce Personal Line Insurance Products
+See Details for all the requirements and design on Figma:
+Design Link
+Prototype Link
+General Requirements:
+List and describe available personal insurance products
+Highlight the unique features of each product
+Provide easy comparison between different insurance options
+CTA to sign
+_
+up/login
+http://rizzpolicy.com/policyreview
+Purpose: Introduce the AI Policy Review feature
+See Details for all the requirements and design on Figma:
+Design Link
+Prototype Link
+General Requirements: :
+Explain the AI-powered policy review process and its benefits
+Showcase how the AI can identify potential savings or coverage improvements
+Provide a sample or demo of the policy review process
+http://rizzpolicy.com/commercial
+Purpose: Introduce Commercial Lines Insurance
+See Details for all the requirements and design on Figma:
+Design Link
+Prototype Link
+General Requirements:
+List and describe available commercial insurance products
+Highlight industry-specific insurance solutions
+Provide case studies or examples of how businesses benefit from Rizz Policy's offerings
+CTA to complete the waitlist form
+User Account Pages
+http://rizzpolicy.com/signup
+Purpose: Allow new users to create an account
+See Details for all the requirements and design on Figma:
+Design Link
+Prototype Link
+General Requirements:
+Implement account creation form
+Enable SSO (Single Sign-On) options
+Integrate with email for account verification
+Collect minimal necessary information to start the insurance quoting process
+http://rizzpolicy.com/login
+Purpose: Allow existing users to access their accounts
+See Details for all the requirements and design on Figma:
+Design Link
+Requirements:
+Implement login form
+Enable SSO options
+Implement password recovery feature
+Provide an option to remember users on trusted devices.
+User Dashboard
+app.rizzpolicy.com/dashboard
+Purpose: Provide a personalized user interface after login
+See Details for all the requirements and design on Figma:
+Design Link
+Prototype Link
+General Requirements:
+Implement an empty dashboard structure
+Ensure proper authentication and access control
+Prepare placeholders for future features like quote requests, policy overview, help center, profile management
+2. Architecture Design
+2.1 Data Models
+Users Collection: Store user account information
+Data Model:
+Required Data Fields for the users table on DynamoDB
+1 _id #id
+2 email #string
+3 firstName #string
+4 lastName #string
+5 phoneNum #num
+6 password #token
+7 loginMethod #string
+8 createDateTime #datetime
+forms collection: Store form submission data
+Data Schema for the forms table :
+Required Data Fields
+Optional Data Fields
+Example data
+2.2 Tech Stack
+Frontend: React
+Backend: AWS (Lambda, API Gateway, DynamoDB)
+CMS: Contentful
+Authentication: AWS Cognito
+Hosting: AWS Amplify
+CDN: CloudFront
+2.3 GitHub Integration
+Version control and source code management
+Connected to Amplify for CI/CD
+2.4 AWS Services
+Amplify Hosting: Host the React application and manage CI/CD pipelines
+API Gateway: Route requests to Lambda functions
+Lambda Functions:
+Auth Function: Manage user authentication with Cognito
+Waiting List Function: Add user info to DynamoDB
+Cognito: Handle user authentication and management
+DynamoDB: Store user information and waiting list data.
+3. Design Specifications
+Figma Design Link
+1 serena@s
+erena.com
+Serena Zhao 123456789
+0
+token Apple 2024/6/25
+00:0
+2 alice.green
+@example
+.com
+Alice Green 456789012
+3
+token789 native 2024/6/25
+00:0
+_
+id email firstName lastName phoneNum password loginMetho
+d
+createDate
+Time
+1 _id #id
+2 email #string
+3 firstName #string
+4 lastName #string
+5 phoneNum #num
+6 formType #string
+7 submissionDateTime # datetime
+1 state #string
+2 InsuranceType #string
+3 message #string
+4 interest #string
+2001 serena
+@exam
+ple.com
+Serena Zhao Sign-up 123456
+7890
+NJ N/A Home
+Insuranc
+e
+2024/6/
+25
+00:00:0
+0
+2002 alice@e
+xample.
+com
+Alice Green Contact
+Us
+098765
+4321
+NY Inquiry
+about
+Commer
+cial
+Insuranc
+e
+Pet
+Insuranc
+e
+2024/6/
+26
+00:00:0
+0
+_
+id email firstNa
+me
+lastNa
+me
+formTy
+pe
+phone
+Num
+state messa
+ge
+interest submis
+sionDat
+eTime
+Figma Graphics Link
+4. Performance Requirements
+Page load time: < 2 seconds on desktop, < 4 seconds on mobile
+API response time: < 400ms for 95% of requests
+Support for concurrent users: Minimum 5000 simultaneous users
+5. Security Requirements
+Implement HTTPS for all pages
+Secure user authentication using AWS Cognito
+Implement proper access controls for user data
+Implement data encryption for sensitive information (e.g., password token)
+6. Browser and Device Support
+Desktop: Latest versions of Chrome, Firefox, Safari, and Edge
+Mobile: Latest versions of iOS Safari and Android Chrome
+Responsive design: Support screen sizes from 320px to 2560px width
+Ensure compatibility with popular tablet devices
+7. Testing Requirements
+Unit tests for all React components and Lambda functions
+Integration tests for API endpoints
+End-to-end tests for critical user flows (signup, login, policy review)
+Cross-browser testing for supported browsers
+Mobile responsive testing on various device sizes
+Performance testing under expected peak load conditions
+Security testing, including penetration testing and vulnerability assessments
+8. Documentation Requirements
+Code comments for complex logic
+README file with setup instructions
+API documentation for backend services
+9. Delivery and Deployment
+Timeline: 5 days after project handoff
+Deliverable Format: Pull Request on GitHub
+Deployment: Automated through AWS Amplify CI/CD pipeline
+Staging environment for QA testing before production deployment
+10. Communication and Project Management
+Slack for team communication (Slack link to be provided)
+GitHub for code reviews and issue tracking
+Weekly progress reports to be submitted
+Daily stand-up meetings (15 minutes) to discuss progress and blockers. Please join at least 2 daily standup meetings during the development period.
+11. Post-Launch Support
+Bug fix warranty
+Performance monitoring and optimization
+Security patches and updates as needed
+User feedback collection and analysis for future improvements
+12. Success Criteria
+All in-scope pages functional and matching Figma designs
+Passing all specified tests
+Adherence to accessibility and performance requirements
+Completed documentation
+Ability to handle at least 1000 concurrent users without performance degradation
+Positive user feedback on the AI policy review feature (to be measured post-launch)
+13. Future Considerations
+Integration with more insurance carriers and partners
+Implementation of a chatbot for customer support
+Expansion to additional types of insurance products

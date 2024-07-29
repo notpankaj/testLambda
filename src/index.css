@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+div#root{
+  max-width: 1440px;
+  margin: 0 auto;
+
+}
+/* .hide-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+} */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.overlayOne {
+  position: relative;
+}
+.overlayOne::before {
+  background:linear-gradient(268deg, rgb(246 246 246) 7%, rgba(255, 255, 255, 0) 50%, #f6f6f6 95%);
+  content: "\00a0";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.overlayTwo {
+  position: relative;
+}
+.overlayTwo::before {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.984) 64%);
+  content: "\00a0";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  overflow: hidden; /* Hide the horizontal scrollbar */
+  width: fit-content; /* Ensure the container adjusts to the width of its content */
+}
+@keyframes reverse-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.reverse-scroll-container {
+  display: flex;
+  gap: 50px;
+  animation: reverse-scroll 20s linear infinite;
+  overflow: hidden; /* Hide the horizontal scrollbar */
+  width: fit-content; /* Ensure the container adjusts to the width of its content */
+}
+.custom-scroller {
+  overflow: scroll;
+  height: 400px;
+
+}
+.custom-scroller::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+
+.error__message{
+  font-size: 10px;
+  color: tomato;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 5px;
+}

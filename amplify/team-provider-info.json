@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rizzpolicyapp-dev-283a5-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767398081340:role/amplify-rizzpolicyapp-dev-283a5-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767398081340:role/amplify-rizzpolicyapp-dev-283a5-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-rizzpolicyapp-dev-283a5-deployment",
+      "UnauthRoleName": "amplify-rizzpolicyapp-dev-283a5-unauthRole",
+      "StackName": "amplify-rizzpolicyapp-dev-283a5",
+      "StackId": "arn:aws:cloudformation:eu-north-1:767398081340:stack/amplify-rizzpolicyapp-dev-283a5/db2defe0-3898-11ef-8113-067c39c1a4a1",
+      "AmplifyAppId": "dkny6vjmvjzcn"
+    },
+    "categories": {
+      "auth": {
+        "rizzpolicyapp044d3682": {}
+      }
+    }
+  }
+}
